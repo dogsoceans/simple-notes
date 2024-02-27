@@ -23,12 +23,21 @@
             ?:  gud.u.msg
               ;div#status.green:"{(trip txt.u.msg)}"
             ;div#status.red:"{(trip txt.u.msg)}"
-      ;p: count {<note-list.simplenotes>}
-        ;form(method "post")
-          ;input(type "text", name "title", placeholder "your title...");
-          ;textarea(name "content", placeholder "your content here");
-          ;input(type "submit", name "save", value "save");
+        ;ul
+          ;*  %-  head
+              %^  spin  note-list.simplenotes  0
+              |=  [n=note i=@ud]
+              [(render-list i n) +(i)]
         ==
+      ==
+    ==
+  ++  render-list
+    |=  [i=@ud n=note]
+    ;li
+      ; {(trip title.n)}
+      ;form(method "post")
+        ;input(type "submit", name "del", value "x");
+        ;input(type "hidden", name "index", value "{(scow %ud i)}");
       ==
     ==
   --
@@ -51,5 +60,5 @@
   |=  [success=? =brief:rudder]
   ^-  reply:rudder
   ?.  success  (build ~ `[| `@t`brief])
-  [%next 'simplenotes' brief]
+  [%next 'mynotes' brief]
 --
