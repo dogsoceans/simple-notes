@@ -48,7 +48,7 @@
   }
   .title-input {
     width: 100%; 
-    padding: 0px 5px 0px 5px
+    padding: 0px 5px 0px 5px; 
     margin: 0px;
     border: none;
     background-color: #fff;
@@ -88,9 +88,9 @@
   }
   .submit-buttons-container {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     gap: 5px; 
-    padding: 4px 5px 0px 0px;
+    padding: 4px 5px 0px 0px; 
   }
 
   .submit-button:hover { 

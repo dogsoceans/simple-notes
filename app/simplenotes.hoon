@@ -19,7 +19,7 @@
     def   ~(. (default-agent this %.n) bowl)
 ++  on-leave  on-leave:def
 ++  on-peek  on-peek:def
-++  on-agent  on-agent:def
+++  on-agent  on-agent:def 
 ++  on-fail  on-fail:def
 ++  on-init
   ^-  (quip card _this)
@@ -52,11 +52,18 @@
           state
       %:  (steer:rudder simplenotes action)
         pages
-        %:  point:rudder
-          /simplenotes
-          &
-          ~(key by pages)
+        :: route
+        ::
+        |=  =trail:rudder
+        ^-  (unit place:rudder)
+        ?~  site=(decap:rudder /simplenotes site.trail)  ~
+        ?+  u.site  ~
+          ~             `[%page & %index]
+          [%index ~]    `[%away (snip site.trail)]
+          [%mynotes ~]  `[%page & %mynotes]
         ==
+        ::adlib
+        ::
         (fours:rudder state)
         |=  act=action
           ^-  $@(@t [brief:rudder (list card) simplenotes])

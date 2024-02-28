@@ -3,7 +3,7 @@
 !:
 ^-  (page:rudder simplenotes action)
 |_  [=bowl:gall =order:rudder =simplenotes]
-++  build
+++  build 
   |=  $:  args=(list [k=@t v=@t])
           msg=(unit [gud=? txt=@t])
       ==
@@ -16,7 +16,7 @@
         ;title:"simple notes"
         ;style:"form \{ display: inline-block; }"
         ;meta(charset "utf-8");
-        ;style:  {style} 
+        ;style:  {style}  
         ;meta(name "viewport", content "width=device-width, initial-scale=1");
       ==
       ;body
