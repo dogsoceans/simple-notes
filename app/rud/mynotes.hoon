@@ -1,5 +1,5 @@
 /-  *simplenotes
-/+  rudder, server
+/+  rudder, server, *simplenotes
 !:
 ^-  (page:rudder simplenotes action)
 |_  [=bowl:gall =order:rudder =simplenotes]
@@ -16,6 +16,7 @@
         ;title:"simple notes"
         ;style:"form \{ display: inline-block; }"
         ;meta(charset "utf-8");
+        ;style:  {style} 
         ;meta(name "viewport", content "width=device-width, initial-scale=1");
       ==
       ;body
@@ -23,11 +24,21 @@
             ?:  gud.u.msg
               ;div#status.green:"{(trip txt.u.msg)}"
             ;div#status.red:"{(trip txt.u.msg)}"
-        ;ul
-          ;*  %-  head
-              %^  spin  note-list.simplenotes  0
-              |=  [n=note i=@ud]
-              [(render-list i n) +(i)]
+        ;div.window
+          ;div.title-bar
+            ;div.title: Simple Notes
+              ;div.window-controls
+                ;button.minimize: -
+                ;button.maximize: □
+              ;button.close: x
+              ==
+          == 
+          ;ul
+            ;*  %-  head
+                %^  spin  note-list.simplenotes  0
+                |=  [n=note i=@ud]
+                [(render-list i n) +(i)]
+          == 
         ==
       ==
     ==

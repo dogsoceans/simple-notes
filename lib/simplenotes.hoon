@@ -6,82 +6,130 @@
   %-  trip
   '''
   body, html {
-      height: 100%;
-      margin: 0;
-      font-family: "MS Sans Serif", Geneva, sans-serif;
-      /* Simulate the Bliss wallpaper gradient */
-      background: linear-gradient(to bottom, #7eb6ff 0%, #bde4ff 50%, #98d98e 50%, #60b044 100%);
+    height: 100%;
+    margin: 0;
+    font-family: "MS Sans Serif", Geneva, sans-serif; 
+    background: linear-gradient(to bottom, #7eb6ff 0%, #bde4ff 50%, #98d98e 50%, #60b044 100%);
   }
 
   .window {
-      width: 600px; /* Fixed width for a more authentic '90s feel */
-      margin: 2% auto;
-      background-color: #c0c0c0; /* The classic Windows grey */
-      border: 2px solid #000;
-      box-shadow: -5px -5px 0px #888888; /* Adding a shadow for a pseudo-3D effect */
+    height: 480px;
+    width: 600px; 
+    margin: 2% auto; 
+    background-color: #c0c0c0; 
+    border: 2px solid #000; 
+    box-shadow: -5px -5px 0px #888888; 
   }
 
   .title-bar {
-      background-color: #000080; /* Windows classic blue */
-      color: #ffffff;
-      padding: 5px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px; /* Smaller fonts were common */
+    background-color: #000080; 
+    
+    color: #ffffff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px; 
   }
 
   .window-controls button {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      padding: 0;
-      margin: 0 2px;
-      border: none;
-      background-color: #c0c0c0;
-      color: black;
-      font-size: 12px; /* Smaller font size for authenticity */
-      text-align: center;
-      line-height: 20px; /* Aligns text vertically */
-      cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0 2px;
+    border: none;
+    background-color: #c0c0c0;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px; 
+    cursor: pointer;
+  }
+  .title-input {
+    width: 100%; 
+    padding: 0px 5px 0px 5px
+    margin: 0px;
+    border: none;
+    background-color: #fff;
+    color: #000; 
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px; 
+    outline: none; 
+  }
+  textarea {
+    width: 100%; 
+    height: 400px; 
+    margin: 0;
+    padding: 0px 5px 0px 5p;
+    border: none;
+    background-color: #fff;
+    color: #000; 
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px; 
+    resize: none; 
+    outline: none; 
   }
 
-  textarea {
-      width: 100%;
-      height: 400px; /* Larger height to fill window */
-      margin: 0;
-      padding: 10px;
-      border: none;
-      border-top: 2px solid #000; /* Mimic a separator line */
-      background-color: #fff;
-      color: #000;
-      font-family: "Courier New", Courier, monospace;
-      font-size: 16px;
-      resize: none; /* Prevent resizing */
+  .submit-button {
+    display: inline-block;
+    width: auto; 
+    padding: 3px 10px; 
+    margin: 0 2px;
+    border: none; 
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #a9a9a9; /* Light grey border */
+    background: linear-gradient(to bottom, #e0e0e0, #c0c0c0); 
+    box-shadow: inset 1px 1px 2px #ffffff, 
+                inset -1px -1px 2px #707070; 
+  }
+  .submit-buttons-container {
+    display: flex;
+    justify-content: right;
+    gap: 5px; 
+    padding: 4px 5px 0px 0px;
+  }
+
+  .submit-button:hover { 
+    background-image: none;
+    background-color: #808080;
+  }
+
+  .submit-button:active { 
+    background-color: #ffffff;
+    background-image: none;
   }
 
   /* Recreate button effects */
-  .window-controls button:hover {
-      background-color: #808080;
+  .window-controls button:hover { 
+    background-color: #808080;
   }
 
-  .window-controls button:active {
-      background-color: #ffffff;
+  .window-controls button:active { 
+    background-color: #ffffff; 
   }
 
   /* Custom scrollbar for a retro feel */
   textarea::-webkit-scrollbar {
-      width: 12px;
+    width: 12px;
   }
 
-  textarea::-webkit-scrollbar-track {
-      background: #dfdfdf; /* Light grey track */
+  form { 
+    width: 100%;
   }
 
-  textarea::-webkit-scrollbar-thumb {
-      background: #888888; /* Darker grey thumb */
-      border-radius: 0; /* Remove border radius for a square look */
+  textarea::-webkit-scrollbar-track { 
+    background: #dfdfdf; 
   }
+
+  textarea::-webkit-scrollbar-thumb { 
+    background: #888888; 
+    border-radius: 0; 
+  }
+
 
   '''
 
