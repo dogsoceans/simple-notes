@@ -3,11 +3,9 @@
   $?  [%save =note] 
       [%del index=@ud]
   ==
-+$  title  @t
 +$  content  @t
 +$  note
   $:
-    =title
     =content
   ==
 +$  simplenotes  simplenotes-0

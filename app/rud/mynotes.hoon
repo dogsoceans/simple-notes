@@ -58,7 +58,7 @@
   =/  args=(map @t @t)
     ?~(body ~ (frisk:rudder q.u.body))
   ?:  (~(has by args) 'save')
-    [%save (~(got by args) 'title') (~(got by args) 'content')]
+    [%save (~(got by args) 'content')]
   ?.  &((~(has by args) 'del') (~(has by args) 'index'))
     ~
   ?~  ind=(rush (~(got by args) 'index') dem:ag)
