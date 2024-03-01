@@ -33,19 +33,21 @@
               ;button.close: x
               ==
           == 
-          ;ul
-            ;*  %-  head
-                %^  spin  note-list.simplenotes  0
-                |=  [n=note i=@ud]
-                [(render-list i n) +(i)]
-          == 
-        ==
+          ;div.mynotes-window
+            ;ul
+              ;*  %-  head
+                  %^  spin  note-list.simplenotes  0
+                  |=  [n=note i=@ud]
+                  [(render-list i n) +(i)] 
+            == 
+          ==  
+        == 
       ==
-    ==
+    == 
   ++  render-list
     |=  [i=@ud n=note]
     ;li
-      ; {(trip title.n)}
+      ; {(trip content.n)}
       ;form(method "post")
         ;input(type "submit", name "del", value "x");
         ;input(type "hidden", name "index", value "{(scow %ud i)}");

@@ -59,7 +59,26 @@
   }
   textarea {
     width: 100%; 
-    height: 400px; 
+    height: 418px; 
+    margin: 0;
+    padding: 0px 5px 0px 5p;
+    border: none;
+    background-color: #fff;
+    color: #000; 
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px; 
+    resize: none; 
+    outline: none; 
+  }
+
+  .mynotes-window ul {
+    margin: 0;
+  }
+   
+
+  .mynotes-window {
+    width: 100%; 
+    height: 418px; 
     margin: 0;
     padding: 0px 5px 0px 5p;
     border: none;
@@ -79,6 +98,7 @@
     border: none; 
     color: black;
     font-size: 12px;
+    font-family: "MS Sans Serif", Geneva, sans-serif;
     text-align: center;
     cursor: pointer;
     border: 1px solid #a9a9a9; /* Light grey border */
@@ -101,6 +121,20 @@
   .submit-button:active { 
     background-color: #ffffff;
     background-image: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: none; 
+  }
+
+  a:visited {
+      color: black;
+  }
+
+  a:hover, a:active {
+      color: black;
+      text-decoration: none;
   }
 
   /* Recreate button effects */
@@ -129,6 +163,7 @@
     background: #888888; 
     border-radius: 0; 
   }
+
 
 
   '''

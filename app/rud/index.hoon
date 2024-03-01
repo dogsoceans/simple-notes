@@ -3,7 +3,7 @@
 !:
 ^-  (page:rudder simplenotes action)
 |_  [=bowl:gall =order:rudder =simplenotes]
-++  build 
+++  build  
   |=  $:  args=(list [k=@t v=@t])
           msg=(unit [gud=? txt=@t])
       ==
@@ -13,7 +13,7 @@
     ^-  manx
     ;html
       ;head
-        ;title:"simple notes"
+        ;title:"simple notes" 
         ;style:"form \{ display: inline-block; }"
         ;meta(charset "utf-8");
         ;style:  {style}  
@@ -34,16 +34,15 @@
               ==
           == 
           ;form(method "post")
-            ;input(type "text", name "title", placeholder "Title...", class "title-input");
             ;textarea(name "content", placeholder "Type your notes here...");
             ;div.submit-buttons-container
               ;input(type "submit", name "save", value "save", class "submit-button");
-              ;input(type "submit", name "save", value "my notes", class "submit-button");
+              ;a(href "/simplenotes/mynotes/", class "submit-button"): my notes
             ==
-          ==      
+          ==        
         ==
       ==
-    ==
+    ==  
   --
 ++  argue
   |=  [headers=header-list:http body=(unit octs)]
@@ -51,7 +50,7 @@
   =/  args=(map @t @t)
     ?~(body ~ (frisk:rudder q.u.body))
   ?:  (~(has by args) 'save')
-    [%save (~(got by args) 'title') (~(got by args) 'content')]
+    [%save (~(got by args) 'content')]
   ?.  &((~(has by args) 'del') (~(has by args) 'index'))
     ~
   ?~  ind=(rush (~(got by args) 'index') dem:ag)
