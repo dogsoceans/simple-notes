@@ -23,7 +23,6 @@
 
   .title-bar {
     background-color: #000080; 
-    
     color: #ffffff;
     padding: 5px;
     display: flex;
@@ -73,6 +72,11 @@
 
   .mynotes-window ul {
     margin: 0;
+    padding: 0;
+  }
+  .mynotes-window li {
+    padding: 20px; 
+    border-bottom: 2px dashed #808080;
   }
    
 
@@ -88,6 +92,7 @@
     font-size: 16px; 
     resize: none; 
     outline: none; 
+    overflow-y: auto; /* Enable vertical scrolling */
   }
 
   .submit-button {
@@ -162,6 +167,18 @@
   textarea::-webkit-scrollbar-thumb { 
     background: #888888; 
     border-radius: 0; 
+  }
+
+  .mynotes-window::-webkit-scrollbar-track {
+    background: #dfdfdf;
+  }
+
+  .mynotes-window::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 0; 
+  }
+  .mynotes-window::-webkit-scrollbar {
+    width: 12px;
   }
 
 

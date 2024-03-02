@@ -24,14 +24,14 @@
             ?:  gud.u.msg
               ;div#status.green:"{(trip txt.u.msg)}"
             ;div#status.red:"{(trip txt.u.msg)}"
-        ;div.window
+        ;div.window 
           ;div.title-bar
             ;div.title: Simple Notes
               ;div.window-controls
                 ;button.minimize: -
                 ;button.maximize: □
               ;button.close: x
-              ==
+              == 
           == 
           ;div.mynotes-window
             ;ul
