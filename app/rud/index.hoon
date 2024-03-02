@@ -37,7 +37,7 @@
             ;textarea(name "content", placeholder "Type your notes here...");
             ;div.submit-buttons-container
               ;input(type "submit", name "save", value "save", class "submit-button");
-              ;a(href "/simplenotes/mynotes/", class "submit-button"): my notes
+              ;a(href "/simplenotes/mynotes", class "submit-button"): my notes
             ==
           ==        
         ==
