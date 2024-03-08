@@ -34,7 +34,7 @@
               ==
           == 
           ;form(method "post")
-            ;textarea(name "content", placeholder "Type your notes here..."): :: {?~(current-note.simplenotes ~ note-list.simplenotes)} does this work?
+            ;textarea(name "content", placeholder "Type your notes here..."): {<"\"qwq">}
             ;div.submit-buttons-container
               ;input(type "submit", name "save", value "save", class "submit-button");
               ;a(href "/simplenotes/mynotes", class "submit-button"): my notes
