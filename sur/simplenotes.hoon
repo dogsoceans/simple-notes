@@ -2,8 +2,10 @@
 +$  action
   $?  [%save =note] 
       [%del index=@ud]
+      [%open index=@ud]
   ==
 +$  content  @t
++$  index  @ud
 +$  note
   $:
     =content
@@ -13,6 +15,7 @@
   $:
     %0
     note-list=(list note) 
+    current-note=(unit @ud) ::index
   ==
 --
 

@@ -50,6 +50,7 @@
       ; {(trip content.n)}
       ;form(method "post")
         ;input(type "submit", name "del", value "x");
+        ;input(type "submit", name "open", value "open");
         ;input(type "hidden", name "index", value "{(scow %ud i)}");
       ==
     ==
@@ -61,13 +62,19 @@
     ?~(body ~ (frisk:rudder q.u.body))
   ?:  (~(has by args) 'save')
     [%save (~(got by args) 'content')]
-  ?.  &((~(has by args) 'del') (~(has by args) 'index'))
-    ~
-  ?~  ind=(rush (~(got by args) 'index') dem:ag)
-    ~
-  ?:  (gte u.ind (lent note-list.simplenotes))
-    'note is gone!'
-  [%del u.ind]
+  ?:  &((~(has by args) 'del') (~(has by args) 'index'))
+    ?~  ind=(rush (~(got by args) 'index') dem:ag)
+      ~
+    ?:  (gte u.ind (lent note-list.simplenotes))
+      ~
+    [%del u.ind]
+  ?:  &((~(has by args) 'open') (~(has by args) 'index'))
+    ?~  ind=(rush (~(got by args) 'index') dem:ag)
+      ~
+    ?:  (gte u.ind (lent note-list.simplenotes))
+      ~
+    [%open u.ind]
+  ~
 ::
 ++  final
   |=  [success=? =brief:rudder]
