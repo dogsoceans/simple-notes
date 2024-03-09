@@ -11,6 +11,8 @@
   |^  [%page page]
   ++  page
     ^-  manx
+    =/  content  
+      ?~(current-note.simplenotes '' =+(x=(snag u.current-note.simplenotes note-list.simplenotes) content.x))
     ;html
       ;head
         ;title:"simple notes" 
@@ -34,7 +36,7 @@
               ==
           == 
           ;form(method "post")
-            ;textarea(name "content", placeholder "Type your notes here..."): {<"\"qwq">}
+            ;textarea(name "content", placeholder "Type your notes here..."):"{(trip ?~(current-note.simplenotes '' =+(x=(snag u.current-note.simplenotes note-list.simplenotes) content.x)))}"
             ;div.submit-buttons-container
               ;input(type "submit", name "save", value "save", class "submit-button");
               ;a(href "/simplenotes/mynotes", class "submit-button"): my notes
