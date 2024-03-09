@@ -41,6 +41,9 @@
                   [(render-list i n) +(i)] 
             == 
           ==  
+          ;div.submit-buttons-container
+            ;a(href "/simplenotes", class "submit-button"): Back
+          ==
         == 
       ==
     == 
@@ -49,9 +52,11 @@
     ;li
       ; {(trip content.n)}
       ;form(method "post")
-        ;input(type "submit", name "del", value "x");
-        ;input(type "submit", name "open", value "open");
-        ;input(type "hidden", name "index", value "{(scow %ud i)}");
+        ;div.submit-buttons-container
+          ;input(type "submit", name "del", value "Delete");
+          ;input(type "submit", name "open", value "Load");
+          ;input(type "hidden", name "index", value "{(scow %ud i)}");
+        ==
       ==
     ==
   --
