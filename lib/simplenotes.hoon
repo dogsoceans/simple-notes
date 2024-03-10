@@ -75,7 +75,7 @@
     padding: 0;
   }
   .mynotes-window li {
-    padding: 20px; 
+    padding: 20px 20px 0px 20px; 
     border-bottom: 2px dashed #808080;
   }
    

@@ -40,7 +40,7 @@
                   |=  [n=note i=@ud]
                   [(render-list i n) +(i)] 
             == 
-          ==  
+          ==   
           ;div.submit-buttons-container
             ;a(href "/simplenotes", class "submit-button"): Back
           ==
@@ -50,7 +50,7 @@
   ++  render-list
     |=  [i=@ud n=note]
     ;li
-      ; {(trip content.n)}
+      ; {(swag [0 40] (trip content.n))}
       ;form(method "post")
         ;div.submit-buttons-container
           ;input(type "submit", name "del", value "Delete", class "submit-button");
