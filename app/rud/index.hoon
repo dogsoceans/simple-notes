@@ -1,5 +1,5 @@
 /-  *simplenotes
-/+  rudder, server, *simplenotes
+/+  rudder, server, *simplenotes 
 !:
 ^-  (page:rudder simplenotes action)
 |_  [=bowl:gall =order:rudder =simplenotes]
@@ -38,6 +38,7 @@
           ;form(method "post")
             ;textarea(name "content", placeholder "Type your notes here..."):"{(trip ?~(current-note.simplenotes '' =+(x=(snag u.current-note.simplenotes note-list.simplenotes) content.x)))}"
             ;div.submit-buttons-container
+              ;input(type "submit", name "new", value "new", class "submit-button");
               ;input(type "submit", name "save", value "save", class "submit-button");
               ;a(href "/simplenotes/mynotes", class "submit-button"): my notes
             ==
@@ -53,6 +54,8 @@
     ?~(body ~ (frisk:rudder q.u.body))
   ?:  (~(has by args) 'save')
     [%save (~(got by args) 'content')]
+  ?:  (~(has by args) 'new')
+    [%new ~]
   ?.  &((~(has by args) 'del') (~(has by args) 'index'))
     ~
   ?~  ind=(rush (~(got by args) 'index') dem:ag)

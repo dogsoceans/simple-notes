@@ -53,8 +53,8 @@
       ; {(trip content.n)}
       ;form(method "post")
         ;div.submit-buttons-container
-          ;input(type "submit", name "del", value "Delete");
-          ;input(type "submit", name "open", value "Load");
+          ;input(type "submit", name "del", value "Delete", class "submit-button");
+          ;input(type "submit", name "open", value "Load", class "submit-button");
           ;input(type "hidden", name "index", value "{(scow %ud i)}");
         ==
       ==

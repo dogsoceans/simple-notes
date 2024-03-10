@@ -68,9 +68,10 @@
         |=  act=action
           ^-  $@(@t [brief:rudder (list card) simplenotes])
             ?-  -.act
-        %save  ``[%0 (snoc note-list.state note.act) ~]
+        %save  ``[%0 ?~(current-note.state (snoc note-list.state note.act) (snap note-list.state u.current-note.state note.act)) ?~(current-note.state [~ (lent note-list.state)] [~ u.current-note.state])]
         %del   ``[%0 (oust [index.act 1] note-list.state) ~]
         %open  ``[%0 note-list.state [~ index.act]]
+        %new  ``[%0 note-list.state ~]
           ==
       ==
 ++  on-watch

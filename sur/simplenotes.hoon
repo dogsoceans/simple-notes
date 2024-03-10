@@ -3,6 +3,7 @@
   $?  [%save =note] 
       [%del index=@ud]
       [%open index=@ud]
+      [%new ~]
   ==
 +$  content  @t
 +$  index  @ud
